@@ -1,0 +1,44 @@
+footer {
+  width: 100%;
+  background: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+footer .text {
+  width: 20%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .text p {
+  color: black;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  footer .text {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  footer {
+    height: unset;
+  }
+  footer .text {
+    width: 181px;
+    height: unset;
+  }
+  footer .text p {
+    text-align: center;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,110 @@
+.cards {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+  width: 40.6vw;
+  flex-direction: column;
+  margin: 15px 0;
+  max-width: 65vw;
+  width: 45vw;
+}
+.cards:hover {
+  border: 1px solid #727272;
+}
+.card {
+  /* margin: 25px; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: row;
+}
+.card .cardBox {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(219, 237, 251); */
+}
+.card .cardBox .editIcon {
+  display: flex;
+  position: absolute;
+  right: 31vw;
+}
+.card .cardBox .deleteIcon {
+  display: flex;
+  position: absolute;
+  right: 28.5vw;
+}
+.card .cardBox .btn {
+  display: flex;
+  /* flex-direction: column; */
+  /* background-color: #dddadb; */
+}
+.card .cardBox .btn button {
+  border-radius: 4px;
+  padding: 10px;
+}
+.card .cardBox .btn button:hover {
+  border-radius: 4px;
+  background-color: #dddadb;
+}
+.card .cardBox .btn .btnLiked {
+  background-color: #ff5700;
+}
+.cardText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 25px 0; */
+}
+.cardText a {
+  display: flex;
+  padding-bottom: 5px;
+}
+.cardText a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}
+.cardText a small {
+  font-weight: 600;
+}
+.cardText a small:hover {
+  text-decoration: underline;
+}
+.cardText p {
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.2;
+  padding-top: 10px;
+}
+.cardText .cardDesription {
+  color: #373535;
+  font-size: 15px;
+  padding: 0;
+  padding-bottom: 15px;
+}
+.cardImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+}
+.cardImg img {
+  width: 450px;
+  height: 450px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .cards {
+    max-width: 70vw;
+    width: 55vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .cards {
+    width: 70vw;
+  }
+}
