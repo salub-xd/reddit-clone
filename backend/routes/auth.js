@@ -41,6 +41,33 @@ router.get('/fetchAll/:id', verify, async (req, res) => {
     }
 })
 
+router.get('/fetchUsers', async (req, res) => {
+    try {
+        let success = false
+        const user = await User.find();
+        if (!user) {
+            return res.status(404).json({ error: 'No users found' })
+        }
+        let usernames = [];
+        user.map((userInfo) => {
+            // console.log(userInfo._doc);
+            const { username, ...userInfoo } = userInfo._doc;
+            usernames.push(username.trim());
+            // console.log(username);
+        })
+        // const { username, ...userInfo } = user;
+            console.log(usernames);
+
+        // const post = await Post.find();
+
+        success = true;
+        // console.log(success, username, userInfo);
+        res.status(201).json({ success,usernames});
+    } catch (err) {
+        res.status(404).json(err);
+    }
+})
+
 
 router.get('/fetchDetails', verify, async (req, res) => {
     try {
