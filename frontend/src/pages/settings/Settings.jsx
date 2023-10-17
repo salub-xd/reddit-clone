@@ -329,7 +329,10 @@ function UserSettings() {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      {isError && error ? <Text>{error}</Text> : <Box p={4} minH={'100vh'} my={5} display={'flex'} alignItems="center" flexDirection={'column'} maxW={'-webkit-max-content'}  >
+      {isError && error ? <Stack alignItems={'center'}>
+        <Text>{error}</Text>
+        <Button mb={'2'} backgroundColor={'#bbdfff'} color={''} fontSize={'sm'} onClick={modal5.onOpen} height={'8'} >Logout</Button>
+      </Stack> : <Box p={4} minH={'100vh'} my={5} display={'flex'} alignItems="center" flexDirection={'column'} maxW={'-webkit-max-content'}  >
         {isLoading ? <Spinner /> : (<>
           <Stack width="50%">
             <Heading as="h2" size="lg" mb={4} textAlign={'left'}>

@@ -9,7 +9,6 @@ import Error from './pages/error/Error';
 import Post from './pages/post/Post';
 import Profile from './pages/profile/Profile';
 import Settings from './pages/settings/Settings';
-import Modal1 from './components/Modal/Modal1';
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
           <Route path='/settings' element={<Settings />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/modal' element={<Modal1 />} />
           <Route path='*' element={<Error />} />
         </Routes>
         <Footer />

@@ -3,8 +3,6 @@ import './profile.css'
 import Card from '../../components/card/Card'
 import apiLink from '../apiLink/apiLink'
 import { Stack, Text } from '@chakra-ui/react'
-import { NavLink } from 'react-router-dom'
-import { SettingsIcon } from '@chakra-ui/icons'
 import Spinner from '../../components/spinner/Spinner'
 
 const Profile = () => {
@@ -59,7 +57,6 @@ const Profile = () => {
 
     return (
         <div className='profile-container'>
-            {/* <Card */}
             {isLoading ? <Spinner /> : <Stack my={8} p={2} backgroundColor={'white'} shadow={8} minW={40} borderRadius={'full'}>
                 <Text display={'flex'} justifyContent={'center'} textAlign={'center'} color={'red'} fontSize={20} p={1}  >{userData?.name}</Text>
                 <Text textAlign={'center'} color={'gray'} fontSize={15} p={1} >@{userData?.username}</Text>

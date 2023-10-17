@@ -53,10 +53,6 @@ export default function Register() {
 
             }
 
-            // if (res.status === 201) {
-            //     setMyUser(resData);
-            //     setIsError(false)
-            // } 
             if (res.status === 403 || res.status === 404) {
                 setError(resData.error);
                 setIsError(true);
@@ -93,9 +89,6 @@ export default function Register() {
                     <Heading fontSize={'4xl'} textAlign={'left'}>
                         Sign up
                     </Heading>
-                    {/* <Text fontSize={'lg'} color={'gray.600'}>
-                        to enjoy all of our cool features ✌️
-                    </Text> */}
                 </Stack>
                 <Box
                     rounded={'lg'}
